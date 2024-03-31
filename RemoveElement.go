@@ -23,7 +23,7 @@ func removeElement(nums []int, val int) int {
 	k := len(nums)
 	n := 0
 	
-    for i := 0; i < k; i ++{
+    for i := 0; i <len(nums); i ++{
 		if nums[i] == val{
 			n++
 		}
@@ -35,6 +35,8 @@ func removeElement(nums []int, val int) int {
 				if nums[j] != val {
 					nums[i], nums[j] = nums[j], nums[i]
 					k--
+					break
+					
 				}
 			}
 		}
